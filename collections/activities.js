@@ -68,6 +68,11 @@ let ActivitiesSchema = new SimpleSchema({
     type: [ String ],
     label: "The tags for this activity.",
     optional: true
+  },
+  "category": {
+    type: String,
+    label: "The category of this activity.",
+    optional: false
   }
 });
 

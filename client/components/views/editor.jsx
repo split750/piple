@@ -31,6 +31,7 @@ Editor = React.createClass({
               slug: getValue( form, '[name="activitySlug"]' ),
               content: getValue( form, '[name="activityContent"]' ),
               published: isChecked( form, '[name="activityPublished"]' ),
+              category: getValue( form, '[name="activityCategory"]' ),
               tags: getValue( form, '[name="activityTags"]' ).split( ',' ).map( ( string ) => {
                 return string.trim();
               })
@@ -120,6 +121,16 @@ Editor = React.createClass({
               name="activityContent"
               label="Content"
               defaultValue={ this.data.activity && this.data.activity.content }
+            />
+          </FormGroup>
+          <FormGroup>
+            <FormControl
+              showLabel={ false }
+              style="text"
+              type="text"
+              name="activityCategory"
+              label="Category"
+              defaultValue={ this.data.activity && this.data.activity.category }
             />
           </FormGroup>
           <FormGroup>

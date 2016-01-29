@@ -21,7 +21,11 @@ ActivitiesList = React.createClass({
   },
   renderActivitiesList() {
     if ( this.data.activities.length > 0 ) {
-      return <ListGroup linked={ true } items={ this.data.activities } />;
+      /*return <ListGroup linked={ true } items={ this.data.activities } />;*/
+      return(
+      	<p>test</p>
+      	);
+
     } else {
       return <WarningAlert>No activities found.</WarningAlert>;
     }
